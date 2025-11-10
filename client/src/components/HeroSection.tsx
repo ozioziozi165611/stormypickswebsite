@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { TrendingUp, Users, Target, Award, ArrowRight } from "lucide-react";
 import heroBackgroundImg from "@assets/generated_images/Dark_sports_hero_background_1ead2fae.png";
 import spLogoImg from "@assets/image_1762738117348.png";
+import FloatingBubbles from "@/components/FloatingBubbles";
 
 export default function HeroSection() {
   const handleCtaClick = () => {
@@ -20,6 +21,7 @@ export default function HeroSection() {
       />
       <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85" />
       <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10" />
+      <FloatingBubbles />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-12 min-h-screen flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
