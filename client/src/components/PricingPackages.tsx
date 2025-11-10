@@ -59,8 +59,10 @@ const packages = [
 
 export default function PricingPackages() {
   return (
-    <div className="py-20 px-4 bg-black/85 relative" id="pricing">
+    <div className="py-20 px-4 bg-gradient-to-b from-black/85 via-black/80 to-black/85 relative" id="pricing">
+      <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-black/85 to-transparent pointer-events-none"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-accent/6 via-transparent to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/90 to-transparent pointer-events-none"></div>
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white" data-testid="text-pricing-heading">

@@ -21,6 +21,7 @@ export default function HeroSection() {
       />
       <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85" />
       <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10" />
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/90 to-transparent pointer-events-none" />
       <FloatingBubbles />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-12 min-h-screen flex flex-col justify-center">

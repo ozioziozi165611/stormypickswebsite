@@ -34,7 +34,8 @@ const metrics = [
 
 export default function PerformanceMetrics() {
   return (
-    <div className="py-20 px-4 pb-32 bg-black/90 relative">
+    <div className="py-20 px-4 pb-32 bg-gradient-to-b from-black/90 via-black/85 to-black/95 relative">
+      <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-black/90 to-transparent pointer-events-none"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/6 via-transparent to-transparent"></div>
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-12">
