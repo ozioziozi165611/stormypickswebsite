@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Check, Zap, Crown } from "lucide-react";
+import { Check, Zap, Crown, Calendar } from "lucide-react";
 
 const packages = [
   {
@@ -22,11 +22,30 @@ const packages = [
     highlighted: false
   },
   {
+    name: "Stormy Monthly VIP",
+    price: "$29.99",
+    period: "per month",
+    priceSubtext: "AUD",
+    description: "Best value",
+    features: [
+      "Daily expert picks",
+      "Real-time notifications",
+      "Performance tracking",
+      "Exclusive VIP channels",
+      "Access to Discord community",
+      "Cancel anytime"
+    ],
+    url: "https://whop.com/stormy-picks/stormy-picks/?funnelId=product_4fb688ad-eaaf-4370-877c-0e12a50d1c75",
+    icon: Calendar,
+    highlighted: true,
+    badge: "Best Value"
+  },
+  {
     name: "Stormy Yearly VIP",
     price: "$299.99",
     period: "per year",
     priceSubtext: "AUD",
-    description: "Best value - Save over 40%",
+    description: "Save over 40%",
     features: [
       "Everything in Weekly VIP",
       "Exclusive VIP channels",
@@ -34,8 +53,7 @@ const packages = [
     ],
     url: "https://whop.com/stormy-picks/stormy-picks-yearly-vip-9/?funnelId=product_bed79b67-b739-40a9-ab4c-3104381445ef",
     icon: Crown,
-    highlighted: true,
-    badge: "Most Popular"
+    highlighted: false
   }
 ];
 
@@ -49,11 +67,11 @@ export default function PricingPackages() {
             Choose Your Package
           </h2>
           <p className="text-white/70 text-lg" data-testid="text-pricing-description">
-            Start winning today for less than $1.50 a day
+            Start winning today for less than $1 a day
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {packages.map((pkg, index) => (
             <Card 
               key={pkg.name}

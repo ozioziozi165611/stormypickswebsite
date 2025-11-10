@@ -71,7 +71,7 @@ export default function HeroSection() {
                 className="text-lg px-8 py-7 h-auto bg-accent hover:bg-accent text-accent-foreground font-bold shadow-2xl group"
                 data-testid="button-cta"
               >
-                Start for Less Than $1.50 a Day
+                Start for Less Than $1 a Day
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
