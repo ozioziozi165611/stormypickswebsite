@@ -50,7 +50,7 @@ export default function PricingPackages() {
             Choose Your Package
           </h2>
           <p className="text-muted-foreground text-lg" data-testid="text-pricing-description">
-            Start winning today for less than $1 a day
+            Start winning today for less than $1.50 a day
           </p>
         </div>
 
