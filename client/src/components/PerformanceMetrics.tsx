@@ -11,9 +11,9 @@ const metrics = [
   },
   {
     icon: Target,
-    label: "Average Odds",
-    value: "+142",
-    description: "Across All Picks",
+    label: "Total Profit",
+    value: "$15,251",
+    description: "Since June 2024",
     color: "text-primary"
   },
   {

@@ -7,9 +7,14 @@ import FloatingBubbles from "@/components/FloatingBubbles";
 
 export default function HeroSection() {
   const handleCtaClick = () => {
-    const pricingSection = document.getElementById('pricing');
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    const isMobile = window.innerWidth < 1024;
+    if (isMobile) {
+      window.location.href = 'https://whop.com/stormy-picks/stormy-picks/?funnelId=product_4fb688ad-eaaf-4370-877c-0e12a50d1c75';
+    } else {
+      const pricingSection = document.getElementById('pricing');
+      if (pricingSection) {
+        pricingSection.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -63,17 +68,17 @@ export default function HeroSection() {
               <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-md p-4" data-testid="stat-units-profited">
                 <div className="flex items-center gap-2 mb-2">
                   <TrendingUp className="w-5 h-5 text-accent" />
-                  <div className="text-3xl font-bold text-white">152.51</div>
+                  <div className="text-3xl font-bold text-white">$15,251</div>
                 </div>
-                <div className="text-white/60 text-xs uppercase tracking-wide">Units Profited Since June</div>
+                <div className="text-white/60 text-xs uppercase tracking-wide">Profited Since June</div>
               </div>
 
               <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-md p-4" data-testid="stat-monthly-average">
                 <div className="flex items-center gap-2 mb-2">
                   <Users className="w-5 h-5 text-primary" />
-                  <div className="text-3xl font-bold text-white">25</div>
+                  <div className="text-3xl font-bold text-white">$2,500</div>
                 </div>
-                <div className="text-white/60 text-xs uppercase tracking-wide">Units on Average Per Month</div>
+                <div className="text-white/60 text-xs uppercase tracking-wide">Average Per Month</div>
               </div>
             </div>
 
