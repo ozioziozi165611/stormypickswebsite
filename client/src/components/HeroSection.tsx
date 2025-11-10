@@ -7,13 +7,19 @@ import FloatingBubbles from "@/components/FloatingBubbles";
 
 export default function HeroSection() {
   const handleCtaClick = () => {
-    const isMobile = window.innerWidth < 1024;
-    if (isMobile) {
-      window.location.href = 'https://whop.com/stormy-picks/stormy-picks/?funnelId=product_4fb688ad-eaaf-4370-877c-0e12a50d1c75';
-    } else {
-      const pricingSection = document.getElementById('pricing');
-      if (pricingSection) {
-        pricingSection.scrollIntoView({ behavior: 'smooth' });
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+      
+      // On mobile, scroll to and highlight the monthly package
+      const isMobile = window.innerWidth < 1024;
+      if (isMobile) {
+        setTimeout(() => {
+          const monthlyCard = document.querySelector('[data-testid="card-package-1"]');
+          if (monthlyCard) {
+            monthlyCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 500);
       }
     }
   };
