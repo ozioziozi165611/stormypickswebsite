@@ -119,7 +119,7 @@ export default function Testimonials() {
                   className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0"
                   data-testid={`testimonial-slide-${index}`}
                 >
-                  <Card className="p-6 h-full hover-elevate bg-black/40 backdrop-blur-md border-white/10 transition-all duration-300">
+                  <Card className="p-6 h-full hover-elevate bg-white/5 backdrop-blur-md border-white/10 transition-all duration-300">
                     <div className="flex items-start gap-4 mb-4">
                       <Avatar className="w-12 h-12 border-2 border-primary/30">
                         {testimonial.avatar && (
@@ -130,7 +130,7 @@ export default function Testimonials() {
                         </AvatarFallback>
                       </Avatar>
                       <div className="flex-1">
-                        <div className="font-bold mb-1 text-white text-base" data-testid={`text-testimonial-name-${index}`}>
+                        <div className="font-bold mb-1 text-white" data-testid={`text-testimonial-name-${index}`}>
                           {testimonial.name}
                         </div>
                         <div className="flex items-center gap-1">
@@ -141,7 +141,7 @@ export default function Testimonials() {
                       </div>
                     </div>
                     <Quote className="w-7 h-7 text-primary/60 mb-3" />
-                    <p className="text-white/70 mb-4 leading-relaxed text-sm" data-testid={`text-testimonial-${index}`}>
+                    <p className="text-white/90 mb-4 leading-relaxed text-sm" data-testid={`text-testimonial-${index}`}>
                       {testimonial.text}
                     </p>
                     <div className="mt-auto border-t border-white/10 pt-3">

@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { TrendingUp, Users, Target, Award, ArrowRight } from "lucide-react";
 import heroBackgroundImg from "@assets/generated_images/Dark_sports_hero_background_1ead2fae.png";
 import spLogoImg from "@assets/image_1762738117348.png";
+import FloatingBubbles from "@/components/FloatingBubbles";
 
 export default function HeroSection() {
   const handleCtaClick = () => {
@@ -20,6 +21,7 @@ export default function HeroSection() {
       />
       <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85" />
       <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10" />
+      <FloatingBubbles />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-12 min-h-screen flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -46,29 +48,29 @@ export default function HeroSection() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 rounded-lg p-6 max-w-md">
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="text-center" data-testid="stat-units-profited">
-                  <div className="flex items-center justify-center gap-2 mb-1">
-                    <TrendingUp className="w-6 h-6 text-accent" />
-                  </div>
-                  <div className="text-4xl md:text-5xl font-bold text-white mb-1">152.51</div>
-                  <div className="text-white/70 text-xs uppercase tracking-wide">Units Since June</div>
+            <div className="grid grid-cols-2 gap-6 max-w-md">
+              <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-md p-4" data-testid="stat-units-profited">
+                <div className="flex items-center gap-2 mb-2">
+                  <TrendingUp className="w-5 h-5 text-accent" />
+                  <div className="text-3xl font-bold text-white">152.51</div>
                 </div>
-
-                <div className="text-center border-l border-white/20" data-testid="stat-monthly-average">
-                  <div className="flex items-center justify-center gap-2 mb-1">
-                    <Users className="w-6 h-6 text-primary" />
-                  </div>
-                  <div className="text-4xl md:text-5xl font-bold text-white mb-1">25</div>
-                  <div className="text-white/70 text-xs uppercase tracking-wide">Avg Per Month</div>
-                </div>
+                <div className="text-white/60 text-xs uppercase tracking-wide">Units Profited Since June</div>
               </div>
 
+              <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-md p-4" data-testid="stat-monthly-average">
+                <div className="flex items-center gap-2 mb-2">
+                  <Users className="w-5 h-5 text-primary" />
+                  <div className="text-3xl font-bold text-white">25</div>
+                </div>
+                <div className="text-white/60 text-xs uppercase tracking-wide">Units on Average Per Month</div>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg"
-                onClick={() => window.location.href = 'https://whop.com/stormy-picks/stormy-picks/?funnelId=product_4fb688ad-eaaf-4370-877c-0e12a50d1c75'}
-                className="w-full text-lg font-bold bg-accent text-accent-foreground shadow-2xl group"
+                onClick={handleCtaClick}
+                className="text-lg px-8 py-7 h-auto bg-accent hover:bg-accent text-accent-foreground font-bold shadow-2xl group"
                 data-testid="button-cta"
               >
                 Start for Less Than $1 a Day

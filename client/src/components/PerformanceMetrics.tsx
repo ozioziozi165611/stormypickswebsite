@@ -34,8 +34,8 @@ const metrics = [
 
 export default function PerformanceMetrics() {
   return (
-    <div className="py-20 px-4 bg-gradient-to-b from-black/70 via-black/60 to-black/70 relative">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-accent/5"></div>
+    <div className="py-20 px-4 bg-gradient-to-b from-black/80 via-black/70 to-black/90 relative">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent"></div>
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white" data-testid="text-performance-heading">
@@ -50,7 +50,7 @@ export default function PerformanceMetrics() {
           {metrics.map((metric, index) => (
             <Card 
               key={metric.label}
-              className="p-6 text-center hover-elevate bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border-white/20 shadow-lg"
+              className="p-6 text-center hover-elevate bg-white/5 backdrop-blur-md border-white/10"
               data-testid={`card-metric-${index}`}
             >
               <metric.icon className={`w-10 h-10 mx-auto mb-4 ${metric.color}`} />

@@ -75,11 +75,7 @@ export default function PricingPackages() {
           {packages.map((pkg, index) => (
             <Card 
               key={pkg.name}
-              className={`p-8 relative hover-elevate backdrop-blur-md transition-all duration-300 ${
-                pkg.highlighted 
-                  ? 'bg-gradient-to-br from-accent/20 to-primary/20 border-accent/40 shadow-xl shadow-accent/20 scale-105' 
-                  : 'bg-white/5 border-white/10'
-              }`}
+              className={`p-8 relative hover-elevate bg-white/5 backdrop-blur-md border-white/10 ${pkg.highlighted ? 'ring-2 ring-accent' : ''}`}
               data-testid={`card-package-${index}`}
             >
               {pkg.badge && (
