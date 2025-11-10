@@ -4,7 +4,7 @@ import { Check, Zap, Crown } from "lucide-react";
 
 const packages = [
   {
-    name: "Weekly VIP",
+    name: "Stormy Weekly VIP",
     price: "$9.99",
     period: "per week",
     priceSubtext: "AUD",
@@ -13,6 +13,7 @@ const packages = [
       "Daily expert picks",
       "Real-time notifications",
       "Performance tracking",
+      "Exclusive VIP channels",
       "Access to Discord community",
       "Cancel anytime"
     ],
@@ -21,17 +22,14 @@ const packages = [
     highlighted: false
   },
   {
-    name: "Yearly VIP",
+    name: "Stormy Yearly VIP",
     price: "$299.99",
     period: "per year",
     priceSubtext: "AUD",
     description: "Best value - Save over 40%",
     features: [
       "Everything in Weekly VIP",
-      "Priority pick delivery",
       "Exclusive VIP channels",
-      "1-on-1 strategy sessions",
-      "Advanced analytics dashboard",
       "Biggest savings"
     ],
     url: "https://whop.com/stormy-picks/stormy-picks-yearly-vip-9/?funnelId=product_bed79b67-b739-40a9-ab4c-3104381445ef",
