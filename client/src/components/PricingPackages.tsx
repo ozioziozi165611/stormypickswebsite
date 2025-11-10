@@ -43,13 +43,14 @@ const packages = [
 
 export default function PricingPackages() {
   return (
-    <div className="py-20 px-4 bg-muted/30" id="pricing">
-      <div className="max-w-6xl mx-auto">
+    <div className="py-20 px-4 bg-gradient-to-b from-black/80 via-black/75 to-black/80 relative" id="pricing">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-pricing-heading">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white" data-testid="text-pricing-heading">
             Choose Your Package
           </h2>
-          <p className="text-muted-foreground text-lg" data-testid="text-pricing-description">
+          <p className="text-white/70 text-lg" data-testid="text-pricing-description">
             Start winning today for less than $1.50 a day
           </p>
         </div>
@@ -58,7 +59,7 @@ export default function PricingPackages() {
           {packages.map((pkg, index) => (
             <Card 
               key={pkg.name}
-              className={`p-8 relative hover-elevate ${pkg.highlighted ? 'border-2 border-accent' : ''}`}
+              className={`p-8 relative hover-elevate bg-white/5 backdrop-blur-md border-white/10 ${pkg.highlighted ? 'ring-2 ring-accent' : ''}`}
               data-testid={`card-package-${index}`}
             >
               {pkg.badge && (
@@ -73,16 +74,16 @@ export default function PricingPackages() {
                 <div className="flex items-center justify-center mb-4">
                   <pkg.icon className={`w-12 h-12 ${pkg.highlighted ? 'text-accent' : 'text-primary'}`} />
                 </div>
-                <h3 className="text-2xl font-bold mb-2" data-testid={`text-package-name-${index}`}>
+                <h3 className="text-2xl font-bold mb-2 text-white" data-testid={`text-package-name-${index}`}>
                   {pkg.name}
                 </h3>
                 <div className="mb-2">
-                  <span className="text-4xl font-bold" data-testid={`text-package-price-${index}`}>
+                  <span className="text-4xl font-bold text-white" data-testid={`text-package-price-${index}`}>
                     {pkg.price}
                   </span>
-                  <span className="text-muted-foreground ml-2">{pkg.priceSubtext}</span>
+                  <span className="text-white/60 ml-2">{pkg.priceSubtext}</span>
                 </div>
-                <div className="text-muted-foreground mb-2" data-testid={`text-package-period-${index}`}>
+                <div className="text-white/60 mb-2" data-testid={`text-package-period-${index}`}>
                   {pkg.period}
                 </div>
                 <p className="text-sm font-semibold text-primary" data-testid={`text-package-description-${index}`}>
@@ -98,7 +99,7 @@ export default function PricingPackages() {
                     data-testid={`text-package-feature-${index}-${featureIndex}`}
                   >
                     <Check className="w-5 h-5 text-chart-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">{feature}</span>
+                    <span className="text-sm text-white/80">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -119,7 +120,7 @@ export default function PricingPackages() {
           ))}
         </div>
 
-        <div className="text-center mt-8 text-sm text-muted-foreground">
+        <div className="text-center mt-8 text-sm text-white/50">
           All prices in Australian Dollars (AUD)
         </div>
       </div>

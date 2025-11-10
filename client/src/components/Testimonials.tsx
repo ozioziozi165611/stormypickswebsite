@@ -80,18 +80,19 @@ export default function Testimonials() {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="py-20 px-4 bg-gradient-to-b from-muted/20 to-background">
-      <div className="max-w-7xl mx-auto">
+    <div className="py-20 px-4 bg-gradient-to-b from-black/80 via-black/70 to-black/80 relative">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-1 mb-3">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-6 h-6 fill-accent text-accent" />
             ))}
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-testimonials-heading">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white" data-testid="text-testimonials-heading">
             Trusted by Winning Bettors
           </h2>
-          <p className="text-muted-foreground text-lg" data-testid="text-testimonials-description">
+          <p className="text-white/70 text-lg" data-testid="text-testimonials-description">
             See what our community has to say
           </p>
         </div>
@@ -105,21 +106,21 @@ export default function Testimonials() {
                   className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0"
                   data-testid={`testimonial-slide-${index}`}
                 >
-                  <Card className="p-6 h-full hover-elevate border-card-border bg-card/50 backdrop-blur-sm transition-all duration-300">
+                  <Card className="p-6 h-full hover-elevate bg-white/5 backdrop-blur-md border-white/10 transition-all duration-300">
                     <div className="flex items-center gap-1 mb-4">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                       ))}
                     </div>
-                    <Quote className="w-8 h-8 text-primary/60 mb-4" />
-                    <p className="text-foreground mb-6 leading-relaxed text-sm" data-testid={`text-testimonial-${index}`}>
+                    <Quote className="w-8 h-8 text-primary/80 mb-4" />
+                    <p className="text-white/90 mb-6 leading-relaxed text-sm" data-testid={`text-testimonial-${index}`}>
                       {testimonial.text}
                     </p>
-                    <div className="mt-auto border-t border-border pt-4">
-                      <div className="font-bold mb-1" data-testid={`text-testimonial-name-${index}`}>
+                    <div className="mt-auto border-t border-white/10 pt-4">
+                      <div className="font-bold mb-1 text-white" data-testid={`text-testimonial-name-${index}`}>
                         {testimonial.name}
                       </div>
-                      <div className="text-xs text-muted-foreground">
+                      <div className="text-xs text-white/60">
                         <div data-testid={`text-testimonial-time-${index}`}>
                           {testimonial.timeSince}
                         </div>
@@ -136,7 +137,7 @@ export default function Testimonials() {
               variant="outline"
               size="icon"
               onClick={scrollPrev}
-              className="rounded-full hover-elevate active-elevate-2"
+              className="rounded-full hover-elevate active-elevate-2 bg-white/10 border-white/20 text-white hover:bg-white/20"
               data-testid="button-testimonial-prev"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -145,7 +146,7 @@ export default function Testimonials() {
               variant="outline"
               size="icon"
               onClick={scrollNext}
-              className="rounded-full hover-elevate active-elevate-2"
+              className="rounded-full hover-elevate active-elevate-2 bg-white/10 border-white/20 text-white hover:bg-white/20"
               data-testid="button-testimonial-next"
             >
               <ChevronRight className="w-5 h-5" />

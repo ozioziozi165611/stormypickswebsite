@@ -34,13 +34,14 @@ const metrics = [
 
 export default function PerformanceMetrics() {
   return (
-    <div className="py-20 px-4 bg-background">
-      <div className="max-w-6xl mx-auto">
+    <div className="py-20 px-4 bg-gradient-to-b from-black/80 via-black/70 to-black/90 relative">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent"></div>
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-performance-heading">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white" data-testid="text-performance-heading">
             Transparent Performance
           </h2>
-          <p className="text-muted-foreground text-lg" data-testid="text-performance-description">
+          <p className="text-white/70 text-lg" data-testid="text-performance-description">
             Real results, verified picks, complete transparency
           </p>
         </div>
@@ -49,17 +50,17 @@ export default function PerformanceMetrics() {
           {metrics.map((metric, index) => (
             <Card 
               key={metric.label}
-              className="p-6 text-center hover-elevate"
+              className="p-6 text-center hover-elevate bg-white/5 backdrop-blur-md border-white/10"
               data-testid={`card-metric-${index}`}
             >
               <metric.icon className={`w-10 h-10 mx-auto mb-4 ${metric.color}`} />
-              <div className="text-3xl font-bold mb-1" data-testid={`text-metric-value-${index}`}>
+              <div className="text-3xl font-bold mb-1 text-white" data-testid={`text-metric-value-${index}`}>
                 {metric.value}
               </div>
-              <div className="font-semibold mb-1" data-testid={`text-metric-label-${index}`}>
+              <div className="font-semibold mb-1 text-white" data-testid={`text-metric-label-${index}`}>
                 {metric.label}
               </div>
-              <div className="text-sm text-muted-foreground" data-testid={`text-metric-description-${index}`}>
+              <div className="text-sm text-white/60" data-testid={`text-metric-description-${index}`}>
                 {metric.description}
               </div>
             </Card>
