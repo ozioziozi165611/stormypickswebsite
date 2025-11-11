@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { TrendingUp, Users, Target, Award, ArrowRight } from "lucide-react";
+import { TrendingUp, Users, Target, Award, ArrowRight, HelpCircle } from "lucide-react";
+import { Link } from "wouter";
 import heroBackgroundImg from "@assets/generated_images/Dark_sports_hero_background_1ead2fae.png";
 import spLogoImg from "@assets/image_1762738117348.png";
 import FloatingBubbles from "@/components/FloatingBubbles";
@@ -88,7 +89,7 @@ export default function HeroSection() {
               </div>
             </div>
 
-            <div>
+            <div className="space-y-3">
               <Button 
                 size="lg"
                 onClick={handleCtaClick}
@@ -98,6 +99,20 @@ export default function HeroSection() {
                 Start for Less Than $1 a Day
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
+              
+              <div className="flex justify-center sm:justify-start">
+                <Link href="/discord-guide">
+                  <Button 
+                    variant="ghost" 
+                    size="sm"
+                    className="text-white/80 hover:text-white"
+                    data-testid="button-discord-guide"
+                  >
+                    <HelpCircle className="w-4 h-4 mr-2" />
+                    How to Connect to Discord
+                  </Button>
+                </Link>
+              </div>
             </div>
 
             <div className="flex items-center gap-6 text-white/60 text-sm">
