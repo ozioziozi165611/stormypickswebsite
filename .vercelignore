@@ -1,0 +1,7 @@
+server/
+.replit
+replit.nix
+.config/
+.upm/
+node_modules/
+.git/
