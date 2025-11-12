@@ -13,7 +13,7 @@ const metrics = [
     icon: Target,
     label: "Total Profit",
     value: "$15,251",
-    description: "Since June 2024",
+    description: "Since June 2025",
     color: "text-primary"
   },
   {
